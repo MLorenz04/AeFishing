@@ -12,7 +12,7 @@ Přidává možnost:
   * Epické
   * Legendární
 
-Seznam ryb:
+## Seznam ryb:
 * Amur bílý
 * Bolen dravý
 * Candát obecný
@@ -36,37 +36,37 @@ Seznam ryb:
 * Vyza velká
 
 
-Seznam itemů:
+## Seznam itemů:
 
-## Obyčejné - 6%
+### Obyčejné - 6%
 - Apple /Jablko
 - Suspicious sand / Zvláštní písek
 - Sweet berries / Sladké bobule
 - Bone / Kost
 - Quartz / Křemen
 
-## Neobyčejné - 4%
+### Neobyčejné - 4%
 - Brush / Štětec
 - Raw gold / Vytěžené zlato
 - Rabbit foot / Packa králíka
 - Chainmail armor / Kroužkové brnění
 - Heart pottery shard / Střep se srdcem
 
-## Vzácné - 2%
+### Vzácné - 2%
 - Amethyst shard / Úlomek ametystu
 - Blaze rod / Ohnivákova tyč
 - Emerald / Smaragd
 - Ender eye / Endové oko
 - Shulker shell / Shulkerův krunýř
 
-## Epické - 1%
+### Epické - 1%
 - Netherite Scrap / Netheritový úlomek
 - Diamond / Diamant
 - Experience bottle / Lahev zkušeností (16)
 - Lodestone / Navigační kámen
 - Piglin head / Hlava piglina
 
-## Legendární 0.5%
+### Legendární 0.5%
 - Spawn egg of Axolotl / Axolotla
 - Spawn egg of Cat / Kočky
 - Spawn egg of Horse / Koně
