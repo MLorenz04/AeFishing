@@ -1,4 +1,4 @@
 name: Aefishing
-version: '${project.version}'
+version: '1.0-SNAPSHOT'
 main: aemmo.aefishing.Aefishing
 api-version: '1.20'

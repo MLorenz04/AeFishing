@@ -3,9 +3,7 @@ package aemmo.aefishing;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import java.util.Properties;
-
-public final class AeFishing extends JavaPlugin {
+public class Aefishing extends JavaPlugin {
 
     @Override
     public void onEnable() {
@@ -16,6 +14,6 @@ public final class AeFishing extends JavaPlugin {
 
     @Override
     public void onDisable() {
-        // Plugin shutdown logic
+        Bukkit.getLogger().info("Plugin down! :(");
     }
 }
