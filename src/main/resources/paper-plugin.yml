@@ -1,0 +1,4 @@
+name: Aefishing
+version: '${project.version}'
+main: aemmo.aefishing.Aefishing
+api-version: '1.20'
