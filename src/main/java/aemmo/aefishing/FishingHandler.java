@@ -1,7 +1,8 @@
 package aemmo.aefishing;
 
+import aemmo.aefishing.Items.Chests.TrouchnivySud;
 import aemmo.aefishing.Items.Ryba;
-import aemmo.aefishing.Items.RybaruvPrut;
+import aemmo.aefishing.Items.Rods.RybaruvPrut;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.entity.Item;
@@ -29,21 +30,23 @@ public class FishingHandler implements Listener {
             new ItemStack(Material.CHAINMAIL_HELMET),
             new ItemStack(Material.CHAINMAIL_LEGGINGS),
             new ItemStack(Material.CHAINMAIL_CHESTPLATE),
-            new ItemStack(Material.HEART_POTTERY_SHERD));
+            new ItemStack(Material.HEART_POTTERY_SHERD),
+            new RybaruvPrut(1).getItem(),
+            new TrouchnivySud(1).getItem());
     List<ItemStack> list_of_items_rare = Arrays.asList(
             new ItemStack(Material.AMETHYST_SHARD),
             new ItemStack(Material.BLAZE_ROD),
             new ItemStack(Material.EMERALD),
             new ItemStack(Material.ENDER_EYE),
-            new ItemStack(Material.SHULKER_SHELL));
+            new ItemStack(Material.SHULKER_SHELL),
+            new TrouchnivySud(1).getItem());
 
     List<ItemStack> list_of_items_epic = Arrays.asList(
             new ItemStack(Material.NETHERITE_SCRAP),
             new ItemStack(Material.DIAMOND),
             new ItemStack(Material.EXPERIENCE_BOTTLE, 16),
             new ItemStack(Material.LODESTONE),
-            new ItemStack(Material.PIGLIN_HEAD),
-            new RybaruvPrut(1).getItem());
+            new ItemStack(Material.PIGLIN_HEAD));
     List<ItemStack> list_of_items_legendary = Arrays.asList(
             new ItemStack(Material.AXOLOTL_SPAWN_EGG),
             new ItemStack(Material.CAT_SPAWN_EGG),
@@ -60,32 +63,32 @@ public class FishingHandler implements Listener {
     public void onFish(PlayerFishEvent fishEvent) {
         if (fishEvent.getCaught() instanceof Item) {
             int randomChange = rand.nextInt(100) + 1;
-            if(randomChange <= 12) {
+            if(randomChange <= 8) {
                 Ryba r = new Ryba(1, FishLength());
                 Bukkit.getPlayer(fishEvent.getPlayer().getUniqueId()).getInventory().addItem(r.getItem());
                 Bukkit.getPlayer(fishEvent.getPlayer().getUniqueId()).sendMessage("Ulovil jsi" + ChatColor.DARK_AQUA + " rybu!");
             }
-            if(randomChange > 12 && randomChange <=18) {
+            if(randomChange > 8 && randomChange <=14) {
                 ItemStack i = list_of_items_common.get(rand.nextInt(list_of_items_common.size()));
                 Bukkit.getPlayer(fishEvent.getPlayer().getUniqueId()).getInventory().addItem(i);
                 Bukkit.getPlayer(fishEvent.getPlayer().getUniqueId()).sendMessage("Ulovil jsi " + ChatColor.GRAY + " obyčejný poklad!");
             }
-            if(randomChange > 18 && randomChange <=22) {
+            if(randomChange > 14 && randomChange <=18) {
                 ItemStack i = list_of_items_uncommon.get(rand.nextInt(list_of_items_uncommon.size()));
                 Bukkit.getPlayer(fishEvent.getPlayer().getUniqueId()).getInventory().addItem(i);
                 Bukkit.getPlayer(fishEvent.getPlayer().getUniqueId()).sendMessage("Ulovil jsi " + ChatColor.GREEN + " neobyčejný poklad!");
             }
-            if(randomChange > 22 && randomChange <=24) {
+            if(randomChange > 18 && randomChange <=20) {
                 ItemStack i = list_of_items_rare.get(rand.nextInt(list_of_items_rare.size()));
                 Bukkit.getPlayer(fishEvent.getPlayer().getUniqueId()).getInventory().addItem(i);
                 Bukkit.getPlayer(fishEvent.getPlayer().getUniqueId()).sendMessage("Ulovil jsi " + ChatColor.AQUA + " vzácný poklad!");
             }
-            if(randomChange > 24 && randomChange <=25) {
+            if(randomChange > 20 && randomChange <=21) {
                 ItemStack i = list_of_items_epic.get(rand.nextInt(list_of_items_epic.size()));
                 Bukkit.getPlayer(fishEvent.getPlayer().getUniqueId()).getInventory().addItem(i);
                 Bukkit.getPlayer(fishEvent.getPlayer().getUniqueId()).sendMessage("Ulovil jsi " + ChatColor.LIGHT_PURPLE + " epický poklad!");
             }
-            if(randomChange > 25 && randomChange <=25.5) {
+            if(randomChange > 21 && randomChange <=21.5) {
                 ItemStack i = list_of_items_legendary.get(rand.nextInt(list_of_items_legendary.size()));
                 Bukkit.getPlayer(fishEvent.getPlayer().getUniqueId()).getInventory().addItem(i);
                 Bukkit.getPlayer(fishEvent.getPlayer().getUniqueId()).sendMessage("Ulovil jsi " + ChatColor.GOLD + " legendární poklad!");
@@ -94,7 +97,7 @@ public class FishingHandler implements Listener {
     }
 
     public double FishLength() {
-        double lambda = 1.2D;
+        double lambda = 5.2D;
         Random random = new Random();
         double x = -Math.log(1.0D - random.nextDouble()) / lambda;
         double cislo = 0.2D + x;
