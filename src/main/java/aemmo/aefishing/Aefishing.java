@@ -12,6 +12,7 @@ public class Aefishing extends JavaPlugin {
         Bukkit.getLogger().info( "Zapínám! :)");
         new FishingHandler(this);
         new ChestHandler(this);
+        new FishCookHandler(this);
         PluginCommand command = getCommand("ae_give");
         if (command != null) {
             command.setExecutor(new CommandMenu());

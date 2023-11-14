@@ -12,7 +12,7 @@ import org.bukkit.inventory.ItemStack;
 
 public class Ryba extends ItemHolder {
     Random random = new Random();
-    List<String> fishes = Arrays.asList("Amur bílý", "Bolen dravý", "Candát obecný", "Cejn siný", "Drsek menší", "Hlavatka mramorovaná", "Hrouzek běloploutvý", "Jelec jesen", "Jeseter malý", "Ježdík žlutý", "Kapr obecný", "Mník jednovousý", "Lipan podhorní", "Parma obecná", "Perlín ostrobřichý", "Pstruh obecný", "Sekavčík horský", "Sumec velký", "Štika obecná", "Vranka obecná", "Vyza velká");
+    public static List<String> fishes = Arrays.asList("Amur bílý", "Bolen dravý", "Candát obecný", "Cejn siný", "Drsek menší", "Hlavatka mramorovaná", "Hrouzek běloploutvý", "Jelec jesen", "Jeseter malý", "Ježdík žlutý", "Kapr obecný", "Mník jednovousý", "Lipan podhorní", "Parma obecná", "Perlín ostrobřichý", "Pstruh obecný", "Sekavčík horský", "Sumec velký", "Štika obecná", "Vranka obecná", "Vyza velká");
     public Ryba(int amount, double length) {
         DecimalFormat format = new DecimalFormat("#.##");
         DecimalFormat format2 = new DecimalFormat("#.#");
@@ -21,6 +21,7 @@ public class Ryba extends ItemHolder {
         this.meta.setDisplayName(ChatColor.RESET + "" + ChatColor.DARK_AQUA + fishes.get(random.nextInt(fishes.size())) + " (" + format.format(length) + "m)");
         this.lore.add(ChatColor.WHITE + "Obyčejná ryba plovoucí v blízkých vodách");
         this.lore.add(ChatColor.WHITE + "Délka: " + format2.format(length * 100) + "cm");
+        this.meta.setCustomModelData(123);
         this.meta.setLore(this.lore);
         this.item.setItemMeta(this.meta);
     }
