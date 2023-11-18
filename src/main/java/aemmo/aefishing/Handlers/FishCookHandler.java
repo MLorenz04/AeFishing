@@ -1,26 +1,17 @@
-package aemmo.aefishing;
+package aemmo.aefishing.Handlers;
 
-import aemmo.aefishing.Items.Chests.Stats;
+import aemmo.aefishing.Aefishing;
 import aemmo.aefishing.Items.Fishing.Perla;
-import aemmo.aefishing.Items.Ryba;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
-import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-import org.bukkit.event.block.Action;
 import org.bukkit.event.block.BlockCookEvent;
-import org.bukkit.event.inventory.BrewEvent;
-import org.bukkit.event.inventory.FurnaceSmeltEvent;
-import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.potion.Potion;
 import org.bukkit.potion.PotionType;
 
-import java.sql.SQLOutput;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
 import java.util.Random;
 
 public class FishCookHandler implements Listener {

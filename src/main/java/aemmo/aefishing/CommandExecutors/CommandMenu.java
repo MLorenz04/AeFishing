@@ -1,5 +1,6 @@
-package aemmo.aefishing;
+package aemmo.aefishing.CommandExecutors;
 
+import aemmo.aefishing.Handlers.GiveHandler;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;

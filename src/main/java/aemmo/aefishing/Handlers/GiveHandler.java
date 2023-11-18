@@ -1,17 +1,14 @@
-package aemmo.aefishing;
+package aemmo.aefishing.Handlers;
 
 import aemmo.aefishing.Items.Chests.TrouchnivySud;
 import aemmo.aefishing.Items.Fishing.Perla;
 import aemmo.aefishing.Items.Rods.RybaruvPrut;
 import aemmo.aefishing.Items.Rods.ZapomenutyPrut;
-import aemmo.aefishing.Items.Ryba;
 import org.bukkit.Bukkit;
 import org.bukkit.command.CommandSender;
 import org.bukkit.inventory.ItemStack;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 
 public class GiveHandler {
     static HashMap<String, ItemStack> list = new HashMap<>();

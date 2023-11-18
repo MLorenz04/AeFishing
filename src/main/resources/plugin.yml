@@ -7,3 +7,7 @@ commands:
     usage: /ae_give
     description: Dá hráči určitý počet určitého itemu.
     permission: aefishing.ae_give
+  fish:
+    usage: /fish
+    description: Otevře menu s listem ryb
+    permission: aefishing.fish

@@ -1,5 +1,6 @@
-package aemmo.aefishing;
+package aemmo.aefishing.Handlers;
 
+import aemmo.aefishing.Aefishing;
 import aemmo.aefishing.Items.Chests.TrouchnivySud;
 import aemmo.aefishing.Items.Chests.TrouchnivySudChest;
 import org.bukkit.Bukkit;
@@ -11,9 +12,9 @@ import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
 
-public class ChestHandler implements Listener {
+public class ChestListener implements Listener {
 
-    public ChestHandler(Aefishing a1) {
+    public ChestListener(Aefishing a1) {
         Bukkit.getPluginManager().registerEvents(this, a1);
     }
 
