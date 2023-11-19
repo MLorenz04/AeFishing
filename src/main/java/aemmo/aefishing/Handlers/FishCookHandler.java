@@ -4,6 +4,8 @@ import aemmo.aefishing.Aefishing;
 import aemmo.aefishing.Items.Fishing.Perla;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
+import org.bukkit.block.Campfire;
+import org.bukkit.entity.TropicalFish;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockCookEvent;
@@ -87,7 +89,7 @@ public class FishCookHandler implements Listener {
         Random random = new Random();
         ItemStack randomItem = this.list.get(random.nextInt(this.list.size()));
 
-        if (ingredient != null && ingredient.getType() == Material.COD && ingredient.hasItemMeta() && ingredient.getItemMeta().hasCustomModelData() && ingredient.getItemMeta().getCustomModelData() == 123 && ingredient.getItemMeta().hasDisplayName()) {
+        if (ingredient != null && ingredient.hasItemMeta() && ingredient.getItemMeta().hasCustomModelData() && ingredient.getItemMeta().getCustomModelData() == 123 && ingredient.getItemMeta().hasDisplayName()) {
                 event.setResult(randomItem);
         }
     }

@@ -65,8 +65,8 @@ public class FishingHandler implements Listener {
     @EventHandler
     public void onFish(PlayerFishEvent fishEvent) {
         if (fishEvent.getCaught() instanceof Item) {
-            int randomChange = rand.nextInt(100) + 1;
-            if(randomChange <= 8) {
+            int randomChange = rand.nextInt(120) + 1;
+            if(randomChange <= 6) {
                 Fish r = new Fish(1, FishLength());
                 List<SingleFishForMenu> list = SerializationHandler.deserializeFishes(Properties.path_users + fishEvent.getPlayer().getUniqueId() + ".yaml");
 
@@ -116,10 +116,11 @@ public class FishingHandler implements Listener {
     }
 
     public double FishLength() {
-        double lambda = 5.2D;
+        double lambda = 3.7D;
         Random random = new Random();
         double x = -Math.log(1.0D - random.nextDouble()) / lambda;
-        double cislo = 0.2D + x;
+        double cislo = x;
+        if(cislo > 1) cislo = 1;
         return cislo;
     }
 }

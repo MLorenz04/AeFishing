@@ -36,7 +36,7 @@ public class FishMenuHandler implements CommandExecutor {
                 categorizedFish.computeIfAbsent(fish.getCategory(), k -> new ArrayList<>()).add(fish);
             }
 
-            Inventory doubleChestInventory = Bukkit.getServer().createInventory(null, 54, "Prázdný doublechest");
+            doubleChestInventory = Bukkit.getServer().createInventory(null, 54, "Prázdný doublechest");
             int start_index = 0;
             int[] list_of_indexes = {0, 9, 18, 27, 36, 45};
 

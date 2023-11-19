@@ -119,7 +119,7 @@ public class Fish extends ItemHolder {
     }
 
     public Fish(Material type_of_fish,int amount, double length, String name, String category) {
-        this.category =category;
+        this.category = category;
         this.length = length;
         this.name = name;
         this.type_of_fish = type_of_fish;
