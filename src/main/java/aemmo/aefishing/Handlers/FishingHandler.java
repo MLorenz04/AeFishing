@@ -24,8 +24,20 @@ public class FishingHandler implements Listener {
             new ItemStack(Material.WHEAT, 4),
             new ItemStack(Material.SWEET_BERRIES),
             new ItemStack(Material.BONE),
+            new ItemStack(Material.SEAGRASS),
+            new ItemStack(Material.SEA_PICKLE),
             new ItemStack(Material.QUARTZ));
     List<ItemStack> list_of_items_uncommon = Arrays.asList(
+            new ItemStack(Material.BUBBLE_CORAL_FAN),
+            new ItemStack(Material.BRAIN_CORAL_FAN),
+            new ItemStack(Material.FIRE_CORAL_FAN),
+            new ItemStack(Material.HORN_CORAL_FAN),
+            new ItemStack(Material.TUBE_CORAL_FAN),
+            new ItemStack(Material.BUBBLE_CORAL_BLOCK),
+            new ItemStack(Material.BRAIN_CORAL_BLOCK),
+            new ItemStack(Material.FIRE_CORAL_BLOCK),
+            new ItemStack(Material.HORN_CORAL_BLOCK),
+            new ItemStack(Material.TUBE_CORAL_BLOCK),
             new ItemStack(Material.BRUSH),
             new ItemStack(Material.RAW_GOLD),
             new ItemStack(Material.RABBIT_FOOT),
@@ -34,6 +46,7 @@ public class FishingHandler implements Listener {
             new ItemStack(Material.CHAINMAIL_LEGGINGS),
             new ItemStack(Material.CHAINMAIL_CHESTPLATE),
             new ItemStack(Material.HEART_POTTERY_SHERD),
+            new ItemStack(Material.TROPICAL_FISH_BUCKET),
             new RybaruvPrut(1).getItem(),
             new TrouchnivySud(1).getItem());
     List<ItemStack> list_of_items_rare = Arrays.asList(
@@ -49,7 +62,8 @@ public class FishingHandler implements Listener {
             new ItemStack(Material.DIAMOND),
             new ItemStack(Material.EXPERIENCE_BOTTLE, 16),
             new ItemStack(Material.LODESTONE),
-            new ItemStack(Material.PIGLIN_HEAD));
+            new ItemStack(Material.PIGLIN_HEAD),
+            new ItemStack(Material.HEART_OF_THE_SEA));
     List<ItemStack> list_of_items_legendary = Arrays.asList(
             new ItemStack(Material.AXOLOTL_SPAWN_EGG),
             new ItemStack(Material.CAT_SPAWN_EGG),
