@@ -56,7 +56,10 @@ public class FishingHandler implements Listener {
             new ItemStack(Material.HORSE_SPAWN_EGG),
             new ItemStack(Material.GOAT_SPAWN_EGG),
             new ItemStack(Material.FOX_SPAWN_EGG),
-            new ItemStack(Material.LLAMA_SPAWN_EGG));
+            new ItemStack(Material.PIG_SPAWN_EGG),
+            new ItemStack(Material.SHEEP_SPAWN_EGG),
+            new ItemStack(Material.COW_SPAWN_EGG),
+            new ItemStack(Material.CAMEL_SPAWN_EGG));
     Random rand = new Random();
     public FishingHandler(Aefishing a1) {
         Bukkit.getPluginManager().registerEvents(this, a1);
