@@ -18,6 +18,7 @@ public class Aefishing extends JavaPlugin {
         new FirstJoinHandler(this);
         new InventoryHandler(this);
         new CampfireHandler(this);
+        new FishBonusHandler(this);
         PluginCommand command = getCommand("ae_give");
         PluginCommand command2 = getCommand("fish");
 

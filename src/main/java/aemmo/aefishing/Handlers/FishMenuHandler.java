@@ -38,7 +38,7 @@ public class FishMenuHandler implements CommandExecutor {
 
             doubleChestInventory = Bukkit.getServer().createInventory(null, 54, "Prázdný doublechest");
             int start_index = 0;
-            int[] list_of_indexes = {0, 9, 18, 27, 36, 45};
+            int[] list_of_indexes = {0, 9, 18, 27, 36, 45, 54};
 
             for (Map.Entry<String, List<SingleFishForMenu>> entry : categorizedFish.entrySet()) {
                 int index = list_of_indexes[start_index];
@@ -55,6 +55,7 @@ public class FishMenuHandler implements CommandExecutor {
 
                 for (SingleFishForMenu fish : categoryFish) {
                     if(fish.getMax_length() > 0) {
+
                         Fish f = new Fish(fish.getMaterial(), 1, fish.getMax_length(), fish.getName(), fish.getCategory());
 
                         ItemStack fishItem = f.getItem();
@@ -74,11 +75,10 @@ public class FishMenuHandler implements CommandExecutor {
                     }
                     index++;
                 }
+                doubleChestInventory.setItem(list_of_indexes[start_index+1]-1, new ItemStack(Material.CYAN_STAINED_GLASS_PANE));
                 start_index++;
             }
-
             player.openInventory(doubleChestInventory);
-
         }
         return true;
     }
